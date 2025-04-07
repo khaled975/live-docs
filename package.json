@@ -9,15 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.13.0",
+    "@clerk/themes": "^2.2.27",
+    "@lexical/react": "^0.29.0",
+    "@liveblocks/client": "^2.22.3",
+    "@liveblocks/node": "^2.22.3",
+    "@liveblocks/react": "^2.22.3",
+    "@liveblocks/react-lexical": "^2.22.3",
+    "@liveblocks/react-ui": "^2.22.3",
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jsm-editor": "^0.0.12",
+    "lexical": "^0.29.0",
+    "lucide-react": "^0.487.0",
+    "nanoid": "^5.1.5",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "tailwind-merge": "^3.1.0",
+    "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }
