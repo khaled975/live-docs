@@ -55,13 +55,14 @@ function Collaborator({ user, roomId, email, creatorId, collaborator }) {
         <p className="text-sm text-blue-100">owner</p>
       ) : (
         <div className="flex items-center">
-          <UserTypeSelector
+          {/* <UserTypeSelector
             userType={userType}
             setUserType={setUserType}
             onClickHandler={shareDocumentHandler}
-          />
+          /> */}
           <Button
             type="button"
+            variant="destructive"
             onClick={() => removeUserAccessHandler(collaborator.email)}
           >
             Remove
