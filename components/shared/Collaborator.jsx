@@ -15,7 +15,12 @@ function Collaborator({ user, roomId, email, creatorId, collaborator }) {
 
   const shareDocumentHandler = async (type) => {
     setLoading(true);
-    await updateDocumentAccess({ roomId, email, userType, updatedBy: user });
+    await updateDocumentAccess({
+      roomId,
+      email,
+      userType: type,
+      updatedBy: user,
+    });
     setLoading(false);
   };
   const removeUserAccessHandler = async (email) => {
