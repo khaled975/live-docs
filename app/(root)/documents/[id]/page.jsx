@@ -25,7 +25,7 @@ async function Document({ params }) {
       : "viewer",
   }));
   const currentUserType = room.usersAccesses[
-    clerkUser.emailAddresses[0].emailAddress
+    clerkUser?.emailAddresses[0]?.emailAddress
   ]?.includes("room:write")
     ? "editor"
     : "viewer";
