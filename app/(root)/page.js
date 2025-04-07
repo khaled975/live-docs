@@ -3,14 +3,15 @@ import DeleteModal from "@/components/shared/DeleteModal";
 import Header from "@/components/shared/Header";
 import { getAllDocuments } from "@/lib/actions/room.actions";
 import { dateConverter } from "@/lib/utils";
-import { SignedIn, UserButton } from "@clerk/nextjs";
+import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
-  const clerkUser = await currentUser();
+  // const clerkUser = await currentUser();
+  const { user: clerkUser } = await useUser();
   if (!clerkUser) redirect("/sign-in");
   const documents = await getAllDocuments(
     clerkUser.emailAddresses[0].emailAddress
@@ -30,7 +31,7 @@ export default async function Home() {
             <h3 className="text-28-semibold">All Documents</h3>
             <AddDocBtn
               userId={clerkUser.id}
-              email={clerkUser.emailAddresses[0].emailAddress}
+              email={clerkUser.emailAddresses[0]?.emailAddress}
             />
           </div>
           <ul className="document-ul">

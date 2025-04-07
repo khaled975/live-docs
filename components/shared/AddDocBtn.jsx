@@ -11,7 +11,7 @@ function AddDocBtn({ userId, email }) {
       const room = await createDocument({ userId, email });
       if (room) router.push(`/documents/${room.id}`);
     } catch (error) {
-      console.log(error);
+      console.log("error happened while creating doc", error);
     }
   };
   return (
